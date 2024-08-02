@@ -584,7 +584,7 @@ Table of Contents
 
    For this AEAD, n = 128 (the AES block length), t = 128, and r = 96;
    the key length is k = 128 or k = 256 for AEAD_AES_128_GCM and
-   AEAD_AES_128_GCM respectively.
+   AEAD_AES_256_GCM respectively.
 
 6.1.1.  Authenticated Encryption Security Limit
 
@@ -678,7 +678,7 @@ Table of Contents
    dominated, at a very low level, by the adversary's offline work o and
    the number of protected messages q across all used keys:
 
-   CA <= (o + q) / 2^247)
+   CA <= (o + q) / 2^247
 
    This implies the following simplified limit, which for most
    reasonable values of p is dominated by a technical limitation of
@@ -920,9 +920,9 @@ Table of Contents
 Acknowledgments
 
    In addition to the authors of papers performing analysis of ciphers,
-   thanks are owed to Scott Flurer, Thomas Fossati, John Mattsson, David
-   McGrew, Yoav Nir, and Alexander Tereschenko for helping making this
-   document better.
+   thanks are owed to Scott Fluhrer, Thomas Fossati, John Mattsson,
+   David McGrew, Yoav Nir, and Alexander Tereschenko for helping making
+   this document better.
 
 Authors' Addresses
 
