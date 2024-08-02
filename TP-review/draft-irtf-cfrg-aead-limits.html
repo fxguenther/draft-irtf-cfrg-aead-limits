@@ -1413,24 +1413,24 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         </tbody>
       </table>
 </div>
-<p id="section-3-3">For each AEAD algorithm, we define the (passive) confidentiality and (active)
-integrity advantage roughly as the advantage an attacker has in breaking the
-corresponding classical security property for the algorithm. A passive attacker
-can query ciphertexts for arbitrary plaintexts. An active attacker can additionally
+<p id="section-3-3">For each AEAD algorithm, we define the chosen-plaintext (IND-CPA) confidentiality and ciphertext
+(INT-CTXT) integrity advantage roughly as the advantage an attacker has in breaking the
+corresponding classical security property for the algorithm. An IND-CPA attacker
+can query ciphertexts for arbitrary plaintexts. An INT-CTXT attacker can additionally
 query plaintexts for arbitrary ciphertexts. Moreover, we define the combined
 authenticated encryption advantage guaranteeing both confidentiality and integrity
 against an active attacker. Specifically:<a href="#section-3-3" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-4.1">
-          <p id="section-3-4.1.1">Confidentiality advantage (CA): The probability of a passive attacker
-succeeding in breaking the confidentiality properties (IND-CPA) of the AEAD scheme.
+          <p id="section-3-4.1.1">Confidentiality advantage (CA): The probability of an attacker
+succeeding in breaking the IND-CPA confidentiality properties of the AEAD scheme.
 In this document, the definition of confidentiality advantage roughly is the
 probability that an attacker successfully distinguishes the ciphertext outputs
 of the AEAD scheme from the outputs of a random function.<a href="#section-3-4.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-4.2">
-          <p id="section-3-4.2.1">Integrity advantage (IA): The probability of an active attacker succeeding
-in breaking the integrity properties (INT-CTXT) of the AEAD scheme. In this document,
+          <p id="section-3-4.2.1">Integrity advantage (IA): The probability of an attacker succeeding
+in breaking the INT-CTXT integrity properties of the AEAD scheme. In this document,
 the definition of integrity advantage roughly is the probability that an attacker
 is able to forge a ciphertext that will be accepted as valid.<a href="#section-3-4.2.1" class="pilcrow">¶</a></p>
 </li>
@@ -1444,7 +1444,7 @@ or is able to forge a ciphertext that will be accepted as valid.<a href="#sectio
 </li>
       </ul>
 <p id="section-3-5">See <span>[<a href="#AEComposition" class="cite xref">AEComposition</a>]</span>, <span>[<a href="#AEAD" class="cite xref">AEAD</a>]</span> for the formal definitions of and relations
-between passive confidentiality (IND-CPA), ciphertext integrity (INT-CTXT),
+between IND-CPA confidentiality, INT-CTXT ciphertext integrity,
 and authenticated encryption security (AE).
 The authenticated encryption advantage subsumes, and can be derived as the
 combination of, both CA and IA:<a href="#section-3-5" class="pilcrow">¶</a></p>
