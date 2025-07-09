@@ -5,10 +5,10 @@
 Network Working Group                                         F. Günther
 Internet-Draft                              IBM Research Europe - Zurich
 Intended status: Informational                                M. Thomson
-Expires: 9 January 2026                                          Mozilla
+Expires: 10 January 2026                                         Mozilla
                                                               C. A. Wood
                                                               Cloudflare
-                                                             8 July 2025
+                                                             9 July 2025
 
 
                     Usage Limits on AEAD Algorithms
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 January 2026.
+   This Internet-Draft will expire on 10 January 2026.
 
 Copyright Notice
 
@@ -787,8 +787,10 @@ Table of Contents
    and AEAD_AES_128_CCM_8 further depend on the maximum number (B resp.
    C) of 128-bit blocks encrypted resp. encrypted or decrypted by any
    single key.  For example, limiting the number of messages (of size <=
-   2^7 blocks) to at most 2^20 (about a million) per key results in B of
-   2^27, which limits both q and v to 2^42 messages for GCM.
+   2^7 blocks) encrypted, resp. encrypted or decrypted, to at most 2^20
+   (about a million) per key results in B resp. C of 2^27, which limits
+   both q and v to 2^42 messages for GCM and CCM, except for CCM_8 where
+   the short tag length limits v to 2^13.
 
 7.  Security Considerations
 
